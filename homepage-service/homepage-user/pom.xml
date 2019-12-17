@@ -51,6 +51,11 @@
             <version>8.0.12</version>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
         <!-- 通用模块 -->
         <dependency>
             <groupId>top.auzqy</groupId>
