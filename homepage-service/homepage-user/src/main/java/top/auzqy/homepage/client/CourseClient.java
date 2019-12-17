@@ -11,8 +11,9 @@ import top.auzqy.homepage.CourseInfosRequest;
 import java.util.List;
 
 /**
- * <h1>通过 Feign 访问课程微服务</h1>
- * Created by Qinyi.
+ * description:  <h1>通过 Feign 访问课程微服务</h1>
+ * createTime: 2019-12-17 22:28
+ * @author au
  */
 @FeignClient(value = "eureka-client-homepage-course",
 fallback = CourseClientHystrix.class)
