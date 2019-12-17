@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `homepage_sc`.`homepage_course` (
   `update_time` datetime NOT NULL DEFAULT '1970-01-01 08:00:00' COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `key_course_name` (`course_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='课程表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='课程表';
 
 -- 创建 homepage_user 数据表
 CREATE TABLE IF NOT EXISTS `homepage_sc`.`homepage_user` (
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `homepage_sc`.`homepage_user` (
   `update_time` datetime NOT NULL DEFAULT '1970-01-01 08:00:00' COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `key_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='用户信息表';
 
 -- 创建 homepage_user_course 数据表
 CREATE TABLE IF NOT EXISTS `homepage_sc`.`homepage_user_course` (
@@ -34,4 +34,4 @@ CREATE TABLE IF NOT EXISTS `homepage_sc`.`homepage_user_course` (
   `update_time` datetime NOT NULL DEFAULT '1970-01-01 08:00:00' COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `key_user_course` (`user_id`,`course_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='用户课程表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='用户课程表';
