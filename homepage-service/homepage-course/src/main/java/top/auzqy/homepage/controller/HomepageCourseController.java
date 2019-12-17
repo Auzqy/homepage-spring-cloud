@@ -33,6 +33,7 @@ public class HomepageCourseController {
 
     /**
      * 127.0.0.1:7001/homepage-course/get/course?id=
+     * 127.0.0.1:9000/homepage/homepage-course/get/course?id=
      * */
     @GetMapping("/get/course")
     public CourseInfo getCourseInfo(Long id) {

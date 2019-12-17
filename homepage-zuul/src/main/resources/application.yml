@@ -9,3 +9,18 @@ eureka:
     client:
         service-url:
             defaultZone: http://server1:8000/eureka/
+
+
+zuul:
+    prefix: /homepage
+    routes:
+        course:
+            path: /homepage-course/**
+            serviceId: eureka-client-homepage-course
+            # strip-prefix：false 的意思是实际路由显示时，不显示访问的前缀
+            strip-prefix: false
+        user:
+            path: /homepage-user/**
+            serviceId: eureka-client-homepage-user
+            # strip-prefix：false 的意思是实际路由显示时，不显示访问的前缀
+            strip-prefix: false
