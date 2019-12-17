@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 import top.auzqy.homepage.ApplicationTest;
 import top.auzqy.homepage.dao.HomepageCourseDao;
 import top.auzqy.homepage.entity.HomepageCourse;
@@ -31,16 +33,21 @@ class ICourseServiceTest {
     @Autowired
     private ICourseService courseService;
 
+    /**
+     * 支持事物，@SpringBootTest 配合 @Transactional 事物默认自动回滚
+     * 配合 @Rollback(false) 可以实现不回滚，默认是 true 即回滚
+     */
+    @Transactional
     @Test
     void createCourseInfo(){
         HomepageCourse course1 = new HomepageCourse(
-                "JDK11&12 新特性解读",
+                "JDK11&12 新特性解读2",
                 0,
                 "https://www.imooc.com",
                 "解读 JDK11 和 JDK12 的新版本特性"
         );
         HomepageCourse course2 = new HomepageCourse(
-                "基于 SpringCloud 微服务架构 广告系统设计与实现",
+                "基于 SpringCloud 微服务架构 广告系统设计与实现2",
                 1,
                 "https://www.imooc.com",
                 "广告系统的设计与实现"
