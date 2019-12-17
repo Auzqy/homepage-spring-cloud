@@ -1,28 +1,28 @@
-spring:
-    application:
-        name: homepage-eureka
+#spring:
+#    application:
+#        name: homepage-eureka
+##    freemarker:
+##        prefer-file-system-access: false
 #    freemarker:
+#        template-loader-path: classpath:/templates/
 #        prefer-file-system-access: false
-    freemarker:
-        template-loader-path: classpath:/templates/
-        prefer-file-system-access: false
-
-server:
-    port: 8000
-
-eureka:
-    instance:
-        hostname: localhost
-        prefer-ip-address: true
-    client:
-        # 表示是否从 Eureka Server 中获取注册信息, 默认是 true.
-        # 如果是单点的 Eureka ，
-        # 所以不需要从别的 Euraka Server 中获取信息，所以 fatch-registry 设置为 false
-        fetch-registry: false
-        # 表示是否将自己注册到 Eureka Server, 默认是 true.
-        # 如果是单点的 Eureka ，所以他也不需要将自己注册到其他的Euraka Server 中，
-        # 所以 register-with-eureka 设置为了false
-        register-with-eureka: false
-        # 设置 Eureka Server 所在的地址，查询服务和注册服务都需要依赖这个地址
-        service-url:
-            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#
+#server:
+#    port: 8000
+#
+#eureka:
+#    instance:
+#        hostname: localhost
+#        prefer-ip-address: true
+#    client:
+#        # 表示是否从 Eureka Server 中获取注册信息, 默认是 true.
+#        # 如果是单点的 Eureka ，
+#        # 所以不需要从别的 Euraka Server 中获取信息，所以 fatch-registry 设置为 false
+#        fetch-registry: false
+#        # 表示是否将自己注册到 Eureka Server, 默认是 true.
+#        # 如果是单点的 Eureka ，所以他也不需要将自己注册到其他的Euraka Server 中，
+#        # 所以 register-with-eureka 设置为了false
+#        register-with-eureka: false
+#        # 设置 Eureka Server 所在的地址，查询服务和注册服务都需要依赖这个地址
+#        service-url:
+#            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
